@@ -76,41 +76,6 @@
   border-right: 21px solid transparent;
   border-bottom: 18px solid #d83d2c;
 }
-#top .top-notifi {
-  position: absolute;
-  top: 0;
-  right: 84px;
-  height: 26px;
-  width: 26px;
-  color: var(--white);
-  margin: 16px;
-  background-color: var(--white);
-  opacity: 0.8;
-  border-radius: 50%;
-}
-#top .top-notifi ion-icon {
-  color: var(--black);
-  height: 100%;
-  width: 100%;
-  transform: scale(0.9);
-}
-#top .top-notifi:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  background-color: var(--primary);
-  cursor: pointer;
-}
-#top .top-notifi:hover ion-icon {
-  color: var(--white);
-  height: 100%;
-  width: 100%;
-  transform: scale(0.8);
-  opacity: 0.9;
-}
-#top .top-notifi:active {
-  transform: scale(1);
-  opacity: 0.9;
-}
 #top .top-user {
   display: flex;
   justify-content: space-between;
