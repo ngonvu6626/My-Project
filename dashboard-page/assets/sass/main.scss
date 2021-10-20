@@ -136,12 +136,16 @@
           transform: translateY(20%);
           padding-left: 4px;
           color: var(--primary);
-          opacity: 0.7;
+          opacity: 1;
           &:hover {
-            transform: scale(1.1);
-            opacity: 1;
+            opacity: 0.9;
           }
         }
+        // ion-icon {
+        //   &:hover ~ #userStatus {
+        //     background-color: white;
+        //   }
+        // }
         #userStatus-none {
           color: #90ee90;
         }
@@ -149,34 +153,60 @@
           color: #ffd700;
         }
       }
-      .userStatus {
-        position: absolute;
+      #userStatus {
         display: none;
+        position: absolute;
         top: 110%;
         right: 26px;
         width: 250px;
         height: auto;
-        background-color: var(--primary);
-        color: var(--black);
+        background-color: rgba(255, 99, 71, 0.95);
         padding: 4px;
         border-radius: 5px;
         animation: moveInTop 0.2s linear;
         z-index: 1;
+        &:hover {
+          display: block;
+        }
         h2 {
-          margin: 8px auto;
-          padding: 4px;
+          margin: 8px 20px;
+          padding: 8px;
           text-align: center;
           line-height: 1.5;
           font-size: 1.6rem;
           letter-spacing: 1px;
-          color: rgba(255, 217, 0, 0.9);
+          color: rgba(255, 217, 0, 0.85);
+          border-bottom: 1px solid black;
         }
         p {
+          color: var(--black);
           text-transform: none;
-          padding-left: 4px;
+          padding: 8px;
           text-align: justify;
           font-size: 1.4rem;
+          font-weight: normal;
           opacity: 0.9;
+          text-shadow: none;
+          letter-spacing: 1.5px;
+        }
+      }
+      .showUserstatus {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 140px;
+          height: 50px;
+          background-color: transparent;
+          z-index: 10;
+        }
+        &:hover > #userStatus-none {
+          color: var(--primary);
+        }
+        &:hover + #userStatus {
+          display: block;
         }
       }
     }
