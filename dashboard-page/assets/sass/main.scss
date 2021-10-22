@@ -878,6 +878,15 @@
     // background-color: var(--black);
     color: var(--white);
     overflow: hidden;
+    animation: showModal 0.1s linear;
+  }
+}
+@keyframes showModal {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
   }
 }
 .modal-content {
