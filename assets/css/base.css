@@ -10,12 +10,14 @@ body {
   --primary: #fb5544;
   --white: #dadee1;
   --black: #252525;
+  --gray: rgba(68, 68, 68, 0.85);
   --lightBlue: #87cefa;
   --lightGreen: #90ee90;
   --textShadow1: 1px 1px 3px #fb5544;
   --textShadow2: 1px 1px 3px #252525;
   --textShadow3: 1px 1px 3px #dadee1;
   --textShadow4: 1px 1px 3px #87cefa;
+  --gradient1: linear-gradient(135deg, #d41e31, #491f8f);
 }
 
 /* Reset CSS */
@@ -75,14 +77,14 @@ a {
 
 /* Nội dung trang chủ */
 #container {
-  margin: 5% auto;
+  margin: 6% auto;
   max-width: 1200px;
   max-height: 600px;
   background: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.75), transparent),
     radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.5), transparent),
     radial-gradient(ellipse at left, #000, transparent);
   border: 1.5px solid rgba(139, 0, 0, 0.5);
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: rgb(0 0 0 / 25%) 4px 8px 24px;
   position: relative;
   animation: moveInTop 0.15s linear 0.3s;
@@ -94,12 +96,46 @@ a {
   position: absolute;
   height: 100%;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: var(--black);
   opacity: 0.25;
   z-index: -9999;
 }
 
+/* Nút tìm kiếm */
+/* 
+  <div class="search">
+     <ion-icon name="search-outline"></ion-icon>
+  </div> */
+.search {
+  position: absolute;
+  top: 50%;
+  right: calc(72px + 26px);
+  height: 36px;
+  width: 36px;
+  transform: translateY(-50%);
+  background-color: var(--white);
+  font-size: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.search:active {
+  transform: translateY(-43%);
+}
+.search:hover {
+  background-color: var(--primary);
+}
+.search:hover > ion-icon {
+  color: var(--white);
+}
+ion-icon {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--black);
+}
 /* Nút Close */
 .btn--close {
   height: 40px;
@@ -147,10 +183,10 @@ a {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-50%);
   }
   80% {
-    transform: translateX(5px);
+    transform: translateX(5%);
   }
   100% {
     opacity: 1;
@@ -213,22 +249,6 @@ a {
   }
 }
 @keyframes hoverItem {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hoverItemRight {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hoverItemLeft {
   0% {
     opacity: 0;
   }
