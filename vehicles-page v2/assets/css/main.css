@@ -2,6 +2,15 @@
   height: 600px;
   width: 1200px;
 }
+#container #view {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+#container #more {
+  height: 100%;
+  width: 100%;
+}
 
 header {
   max-width: 100%;
@@ -141,8 +150,7 @@ section .wrapper .cardMoto {
   height: calc(100% - 108px);
   max-width: 100%;
   margin: 0 12px;
-  padding: 12px 8px;
-  background-color: var(--gray);
+  padding: 4px 0;
   border-radius: 0 0 10px 10px;
 }
 section .wrapper .allItems .card,

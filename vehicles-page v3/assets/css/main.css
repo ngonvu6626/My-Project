@@ -1,0 +1,187 @@
+#container {
+  overflow: hidden;
+}
+
+header .nav-list {
+  display: flex;
+  flex-grow: 1;
+  gap: 16px;
+  border-bottom: 1.5px solid var(--primary);
+  padding: 0 0 12px 0;
+}
+header .nav-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12px;
+  text-transform: uppercase;
+}
+header .nav-list li p {
+  font-size: 2.1rem;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 300;
+  opacity: 0.8;
+}
+header .nav-list li p:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+header .nav-list li img {
+  width: 200px;
+}
+header .nav-list li span {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--white);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--primary), var(--white), var(--primary));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+header .nav-list li:nth-of-type(1) {
+  margin-left: 16px;
+}
+header .nav-list li:nth-of-type(5) {
+  margin-left: auto;
+}
+header .nav-list li:nth-of-type(6) {
+  margin-right: auto;
+}
+header .nav-list li:nth-of-type(7) {
+  margin-left: auto;
+}
+header .nav-list li .active {
+  opacity: 1;
+  color: var(--primary);
+}
+
+section {
+  display: none;
+  height: calc(100% - 99px);
+  width: 100%;
+}
+section #vip,
+section #utility,
+section #truck,
+section #moto {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 16px;
+}
+section #vip .card,
+section #utility .card,
+section #truck .card,
+section #moto .card {
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  height: 300px;
+}
+section #vip .card .imgBx,
+section #utility .card .imgBx,
+section #truck .card .imgBx,
+section #moto .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+section #vip .card .imgBx img,
+section #utility .card .imgBx img,
+section #truck .card .imgBx img,
+section #moto .card .imgBx img {
+  transition: 0.5s;
+  width: 90%;
+}
+section #vip .card .content,
+section #utility .card .content,
+section #truck .card .content,
+section #moto .card .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+section #vip .card .content h2,
+section #utility .card .content h2,
+section #truck .card .content h2,
+section #moto .card .content h2 {
+  font-size: 3rem;
+  color: var(--primary);
+  text-shadow: var(--textShadow2);
+  transition: 0.4s;
+}
+section #vip .card .content button,
+section #utility .card .content button,
+section #truck .card .content button,
+section #moto .card .content button {
+  position: absolute;
+  left: 50%;
+  display: none;
+  width: 96px;
+  height: 46px;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+section #vip .card .content button:hover,
+section #utility .card .content button:hover,
+section #truck .card .content button:hover,
+section #moto .card .content button:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+section #vip .card:hover .imgBx img,
+section #utility .card:hover .imgBx img,
+section #truck .card:hover .imgBx img,
+section #moto .card:hover .imgBx img {
+  width: 100%;
+}
+section #vip .card:hover .content h2,
+section #utility .card:hover .content h2,
+section #truck .card:hover .content h2,
+section #moto .card:hover .content h2 {
+  color: var(--white);
+  text-shadow: var(--textShadow1);
+  transform: translateX(-90%);
+}
+section #vip .card:hover .content button,
+section #utility .card:hover .content button,
+section #truck .card:hover .content button,
+section #moto .card:hover .content button {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */
