@@ -1,0 +1,222 @@
+body {
+  background: url(./lib/image/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -70%;
+    left: 45%;
+    background: var(--gradient3);
+    width: 250px;
+    height: 1300px;
+    animation: spin 8s linear infinite;
+    z-index: -2;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(360deg);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 10px;
+    background-color: var(--black);
+    z-index: -1;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  h2 {
+    padding: 26px 12px;
+    margin: 0 24px;
+    border-bottom: 1.5px solid var(--primary);
+    color: var(--white);
+    text-shadow: var(--textShadow1);
+    font-size: 4em;
+    &:hover {
+      color: var(--primary);
+      text-shadow: var(--textShadow3);
+    }
+  }
+  .col80 {
+    flex: 8;
+  }
+  .col20 {
+    flex: 2;
+    background-color: var(--primary);
+  }
+
+  .col80 .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 12px 24px;
+    gap: 12px;
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      height: 220px;
+      &:hover img {
+        transform: scale(1.2);
+      }
+      &:hover .label a {
+        display: flex;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+      }
+      .label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--gray);
+        height: 40%;
+        padding: 12px;
+        h3 {
+          font-size: 2em;
+          color: var(--primary);
+          text-shadow: var(--textShadow2);
+        }
+        p {
+          color: var(--white);
+          letter-spacing: 0.5px;
+          line-height: 3;
+          font-size: 1.6em;
+        }
+        a {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 12px;
+          bottom: 50%;
+          transform: translateY(50%);
+          height: 32px;
+          width: 75px;
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          background-color: var(--white);
+          color: var(--black);
+          text-transform: uppercase;
+          transition: 0.25s;
+          &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+.col20 .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  height: 100%;
+  padding: 8px 36px;
+  gap: 16px;
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    align-content: center;
+    z-index: 1;
+    ion-icon {
+      font-size: 7em;
+      color: var(--white);
+      transition: 0.5s;
+      &:hover {
+        font-size: 8em;
+        cursor: pointer;
+      }
+    }
+    .about,
+    .facebook,
+    .instagram {
+      display: none;
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px;
+      height: 256px;
+      background-color: var(--white);
+      border-radius: 5px 5px 0 0;
+      h2 {
+        margin: 0;
+        border: none;
+        font-size: 3rem;
+        color: var(--black);
+      }
+      p {
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 64px 0;
+        text-align: center;
+      }
+      &:hover {
+        display: block;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -15%;
+        width: 240px;
+        height: 50px;
+        background-color: transparent;
+      }
+    }
+    &:hover .about {
+      display: block;
+    }
+    &:hover .facebook {
+      display: block;
+    }
+    &:hover .instagram {
+      display: block;
+    }
+  }
+}
+
+.scroll {
+  margin-right: 8px;
+}

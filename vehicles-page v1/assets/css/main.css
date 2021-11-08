@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body {
+  background-image: url("../../../assets/images/bg-demo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 :root {
   --textColor: #dadee1;
@@ -9,8 +14,7 @@
 
 #container {
   display: flex;
-  height: 640px;
-  width: 100%;
+  cursor: default;
   overflow: hidden;
 }
 #container .leftContent {
@@ -23,14 +27,7 @@
 #container .leftContent .top {
   height: 96px;
 }
-#container .leftContent .content {
-  height: 445px;
-}
-#container .leftContent .bottom {
-  height: 96px;
-}
-#container .rightContent,
-#container .rightContent--full {
+#container .rightContent, #container .rightContent--full {
   flex: 0.5;
   border-left: 5px solid var(--primaryColor);
   color: var(--textColor);
@@ -108,22 +105,14 @@
     transform: scale(1);
     opacity: 0.75;
   }
-  #container
-    .rightContent--full
-    .rightContent__body
-    .vehicleCard
-    .vehicleCard--img {
+  #container .rightContent--full .rightContent__body .vehicleCard .vehicleCard--img {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
   }
-  #container
-    .rightContent--full
-    .rightContent__body
-    .vehicleCard
-    .vehicleCard--name {
+  #container .rightContent--full .rightContent__body .vehicleCard .vehicleCard--name {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -143,11 +132,7 @@
     background-color: #fb5644;
     position: relative;
   }
-  #container
-    .rightContent--full
-    .rightContent__body
-    .vehicleCard.activeCard:hover
-    .vehicleCard--more {
+  #container .rightContent--full .rightContent__body .vehicleCard.activeCard:hover .vehicleCard--more {
     display: none;
   }
   #container .rightContent--full .rightContent__footer {
@@ -162,8 +147,7 @@
 .top {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 20%, transparent),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.25), transparent 20%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 20%, transparent), linear-gradient(90deg, rgba(0, 0, 0, 0.25), transparent 20%);
 }
 .top__logo {
   height: 96px;
@@ -209,6 +193,7 @@
   padding: 0 16px;
   color: var(--textColor);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.25), transparent 20%);
+  height: 432px;
 }
 .content__bg {
   position: relative;
@@ -285,17 +270,7 @@
   width: 100%;
   background-color: rgba(251, 86, 68, 0.2);
 }
-.color-1,
-.color-11,
-.color-10,
-.color-9,
-.color-8,
-.color-7,
-.color-6,
-.color-5,
-.color-4,
-.color-3,
-.color-2 {
+.color-1, .color-11, .color-10, .color-9, .color-8, .color-7, .color-6, .color-5, .color-4, .color-3, .color-2 {
   position: relative;
   margin: 10px;
   border: 1.5px solid #db2828;
@@ -303,17 +278,7 @@
   height: 20px;
   width: 20px;
 }
-.color-1::before,
-.color-11::before,
-.color-10::before,
-.color-9::before,
-.color-8::before,
-.color-7::before,
-.color-6::before,
-.color-5::before,
-.color-4::before,
-.color-3::before,
-.color-2::before {
+.color-1::before, .color-11::before, .color-10::before, .color-9::before, .color-8::before, .color-7::before, .color-6::before, .color-5::before, .color-4::before, .color-3::before, .color-2::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -325,45 +290,15 @@
   border-radius: 50%;
   opacity: 0.75;
 }
-.color-1:hover,
-.color-11:hover,
-.color-10:hover,
-.color-9:hover,
-.color-8:hover,
-.color-7:hover,
-.color-6:hover,
-.color-5:hover,
-.color-4:hover,
-.color-3:hover,
-.color-2:hover {
+.color-1:hover, .color-11:hover, .color-10:hover, .color-9:hover, .color-8:hover, .color-7:hover, .color-6:hover, .color-5:hover, .color-4:hover, .color-3:hover, .color-2:hover {
   cursor: pointer;
 }
-.color-1:hover::before,
-.color-11:hover::before,
-.color-10:hover::before,
-.color-9:hover::before,
-.color-8:hover::before,
-.color-7:hover::before,
-.color-6:hover::before,
-.color-5:hover::before,
-.color-4:hover::before,
-.color-3:hover::before,
-.color-2:hover::before {
+.color-1:hover::before, .color-11:hover::before, .color-10:hover::before, .color-9:hover::before, .color-8:hover::before, .color-7:hover::before, .color-6:hover::before, .color-5:hover::before, .color-4:hover::before, .color-3:hover::before, .color-2:hover::before {
   height: 16px;
   width: 16px;
   opacity: 1;
 }
-.color-1:hover::after,
-.color-11:hover::after,
-.color-10:hover::after,
-.color-9:hover::after,
-.color-8:hover::after,
-.color-7:hover::after,
-.color-6:hover::after,
-.color-5:hover::after,
-.color-4:hover::after,
-.color-3:hover::after,
-.color-2:hover::after {
+.color-1:hover::after, .color-11:hover::after, .color-10:hover::after, .color-9:hover::after, .color-8:hover::after, .color-7:hover::after, .color-6:hover::after, .color-5:hover::after, .color-4:hover::after, .color-3:hover::after, .color-2:hover::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -375,17 +310,7 @@
   border-radius: 50%;
   opacity: 0.5;
 }
-.color-1:hover:active,
-.color-11:hover:active,
-.color-10:hover:active,
-.color-9:hover:active,
-.color-8:hover:active,
-.color-7:hover:active,
-.color-6:hover:active,
-.color-5:hover:active,
-.color-4:hover:active,
-.color-3:hover:active,
-.color-2:hover:active {
+.color-1:hover:active, .color-11:hover:active, .color-10:hover:active, .color-9:hover:active, .color-8:hover:active, .color-7:hover:active, .color-6:hover:active, .color-5:hover:active, .color-4:hover:active, .color-3:hover:active, .color-2:hover:active {
   transform: scale(1.1);
 }
 .color-2 {
@@ -497,30 +422,22 @@
 .bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba(37, 37, 37, 0.75);
   color: var(--textColor);
+  height: max-content;
 }
-.bottom__carInventory,
-.bottom__carPrice,
-.bottom__carSpeed,
-.bottom__carCapacity {
+.bottom__carInventory, .bottom__carPrice, .bottom__carSpeed, .bottom__carCapacity {
   padding: 0 16px;
   font-size: 1.8rem;
   text-align: right;
   line-height: 1.8;
 }
-.bottom__carInventory h3,
-.bottom__carPrice h3,
-.bottom__carSpeed h3,
-.bottom__carCapacity h3 {
+.bottom__carInventory h3, .bottom__carPrice h3, .bottom__carSpeed h3, .bottom__carCapacity h3 {
   text-transform: uppercase;
 }
-.bottom__carInventory span,
-.bottom__carPrice span,
-.bottom__carSpeed span,
-.bottom__carCapacity span {
+.bottom__carInventory span, .bottom__carPrice span, .bottom__carSpeed span, .bottom__carCapacity span {
   color: var(--primaryColor);
   font-weight: 500;
 }
