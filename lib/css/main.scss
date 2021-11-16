@@ -126,6 +126,7 @@ html {
               display: none;
             }
           }
+
           i {
             font-size: 8em;
             transition: 0.3s;
@@ -133,6 +134,15 @@ html {
             &:hover {
               transform: scale(1.2);
               cursor: pointer;
+            }
+            &:first-child :hover {
+              color: var(--lightGreen);
+            }
+            &:nth-of-type(2) :hover {
+              color: var(--blue);
+            }
+            &:nth-of-type(3) :hover {
+              color: var(--red);
             }
           }
         }

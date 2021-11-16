@@ -138,5 +138,14 @@ html {
   transform: scale(1.2);
   cursor: pointer;
 }
+#main .flex .grid-bottom .dock .contact i:first-child :hover {
+  color: var(--lightGreen);
+}
+#main .flex .grid-bottom .dock .contact i:nth-of-type(2) :hover {
+  color: var(--blue);
+}
+#main .flex .grid-bottom .dock .contact i:nth-of-type(3) :hover {
+  color: var(--red);
+}
 
 /*# sourceMappingURL=main.css.map */
