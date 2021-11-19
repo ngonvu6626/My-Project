@@ -1,0 +1,197 @@
+#container {
+  background-color: var(--white);
+  max-width: 1920px;
+  max-height: 1080px;
+  height: 90vh;
+  width: 75vw;
+}
+
+header {
+  .heading {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    height: 54px;
+    background: var(--gradient1);
+    &-left {
+      position: absolute;
+      top: 0;
+      left: -16px;
+      width: 100%;
+      height: 100%;
+      max-width: 16px;
+      background: var(--gradient1);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-top: 8px solid var(--colorsp1);
+        border-right: 8px solid var(--colorsp1);
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
+        opacity: 0.9;
+      }
+    }
+    &-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 54px;
+      max-height: 54px;
+      border-top: 27px solid transparent;
+      border-right: 50px solid var(--white);
+      border-bottom: 27px solid transparent;
+      ion-icon {
+        position: absolute;
+        top: -13px;
+        left: 20px;
+        font-size: 2.6rem;
+        color: var(--black);
+        &:hover {
+          transform: scale(1.1);
+          &:active {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+    &-logo {
+      img {
+        max-height: 54px;
+      }
+    }
+
+    // Menu Primary
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-grow: 0.85;
+      gap: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+      justify-content: flex-start;
+      overflow: hidden;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        height: 100%;
+        max-height: 54px;
+        text-align: center;
+        padding: 0 8px;
+        span {
+          display: inline-block;
+          font-size: 1.5rem;
+          color: var(--white);
+          text-transform: capitalize;
+          font-weight: bold;
+        }
+        ion-icon {
+          font-size: 2.2em;
+          color: var(--white);
+        }
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        .active {
+          background-color: rgba(255, 255, 255, 0.1);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+// Thông tin
+.dashboard,
+.vehicle {
+}
+
+.vehicle {
+  display: flex;
+  flex-direction: column;
+  .best-sale {
+    // background-color: red;
+    .slider-frame {
+      background-color: pink;
+      overflow: hidden;
+      max-height: 300px;
+      height: 100%;
+      max-width: 100%;
+      margin: 0 16px;
+
+      // Slider Animation
+    }
+    @-webkit-keyframes slider_animation {
+      0% {
+        right: 0px;
+      }
+      10% {
+        right: 0px;
+      }
+      20% {
+        right: 400px;
+      }
+      30% {
+        right: 400px;
+      }
+      40% {
+        right: 750px;
+      }
+      50% {
+        right: 750px;
+      }
+      60% {
+        right: 750px;
+      }
+      70% {
+        right: 1300px;
+      }
+      80% {
+        right: 1300px;
+      }
+      90% {
+        right: 0px;
+      }
+      100% {
+        right: 0px;
+      }
+    }
+    .slider-images {
+      width: calc(300px * 8);
+      height: 300px;
+      position: relative;
+      -webkit-animation-name: slider_animation;
+      -webkit-animation-duration: 30s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-play-state: running;
+    }
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      height: 100%;
+      width: 300px;
+      float: left;
+    }
+    // end
+  }
+  .list-car {
+  }
+  .title {
+    margin: 24px 0;
+    padding: 8px;
+    height: 36px;
+    width: max-content;
+    background-color: var(--black);
+    color: var(--white);
+  }
+}

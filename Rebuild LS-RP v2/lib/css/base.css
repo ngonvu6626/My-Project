@@ -12,6 +12,9 @@ font-family: 'Roboto', sans-serif;
 :root {
   /* https://mycolor.space/ */
 
+  --white: #dadee1;
+  --black: #252525;
+
   /* Matching Palette Style */
   --colormp1: #f53d2d;
   --colormp2: #56423e;
@@ -38,6 +41,8 @@ font-family: 'Roboto', sans-serif;
   --colordp2: #56423e;
   --colordp3: #bea6a0;
   --colordp4: #3a9700;
+
+  --gradient1: linear-gradient(-180deg, #f53d2d, #f63);
 }
 
 /* Test Background */
