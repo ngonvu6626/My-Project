@@ -14,6 +14,10 @@ font-family: 'Roboto', sans-serif;
 
   --white: #dadee1;
   --black: #252525;
+  --orange: #ffa500;
+  --blackopa10: rgba(37, 37, 37, 0.1);
+  --gray: #808080;
+  --grayopa10: rgba(128, 128, 128, 0.1);
 
   /* Matching Palette Style */
   --colormp1: #f53d2d;
@@ -42,7 +46,11 @@ font-family: 'Roboto', sans-serif;
   --colordp3: #bea6a0;
   --colordp4: #3a9700;
 
+  /* Backgroud  Gradient*/
   --gradient1: linear-gradient(-180deg, #f53d2d, #f63);
+
+  /* Box + Text Shadow */
+  --bsGray: 4px 8px 12px var(--gray);
 }
 
 /* Test Background */
