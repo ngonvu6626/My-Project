@@ -8,6 +8,20 @@ const blockContents = $$(".js-content");
 const btnBuys = $$(".js-buyCar");
 const modal = $("#modal-buy");
 const btnCancel = $("#js-cancel");
+const helpMenus = $$(".js-menu-help");
+const helpContents = $$(".js-content-help");
+
+helpMenus.forEach((helpMenu, index) => {
+  const helpContent = helpContents[index];
+
+  helpMenu.onclick = function () {
+    $(".js-menu-help.active").classList.remove("active");
+    $(".js-content-help.openBlock").classList.remove("openBlock");
+
+    this.classList.add("active");
+    helpContent.classList.add("openBlock");
+  };
+});
 
 //Thay doi hieu ung select khi click vào tung the Color
 picksColor.forEach((pickColor, index) => {
