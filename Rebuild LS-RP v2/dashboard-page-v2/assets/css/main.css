@@ -523,12 +523,23 @@ header .heading ul .active {
   flex: 8;
   padding-left: 16px;
 }
-.help .wrapper .col70 .content-general {
+.help .wrapper .col70 .content-general,
+.help .wrapper .col70 .content-chat,
+.help .wrapper .col70 .content-vehicle,
+.help .wrapper .col70 .content-faction,
+.help .wrapper .col70 .content-house,
+.help .wrapper .col70 .content-weapon {
   display: none;
+  height: 512px;
   max-height: 100%;
   width: 100%;
 }
-.help .wrapper .col70 .content-general .desc {
+.help .wrapper .col70 .content-general .desc,
+.help .wrapper .col70 .content-chat .desc,
+.help .wrapper .col70 .content-vehicle .desc,
+.help .wrapper .col70 .content-faction .desc,
+.help .wrapper .col70 .content-house .desc,
+.help .wrapper .col70 .content-weapon .desc {
   display: flex;
   background-color: var(--grayopa10);
   width: 100%;
@@ -538,14 +549,39 @@ header .heading ul .active {
   gap: 8px;
 }
 .help .wrapper .col70 .content-general .desc .keyword,
-.help .wrapper .col70 .content-general .desc .content {
+.help .wrapper .col70 .content-general .desc .content,
+.help .wrapper .col70 .content-chat .desc .keyword,
+.help .wrapper .col70 .content-chat .desc .content,
+.help .wrapper .col70 .content-vehicle .desc .keyword,
+.help .wrapper .col70 .content-vehicle .desc .content,
+.help .wrapper .col70 .content-faction .desc .keyword,
+.help .wrapper .col70 .content-faction .desc .content,
+.help .wrapper .col70 .content-house .desc .keyword,
+.help .wrapper .col70 .content-house .desc .content,
+.help .wrapper .col70 .content-weapon .desc .keyword,
+.help .wrapper .col70 .content-weapon .desc .content {
   font-size: 1.5em;
 }
 .help .wrapper .col70 .content-general .desc .keyword:hover,
-.help .wrapper .col70 .content-general .desc .content:hover {
+.help .wrapper .col70 .content-general .desc .content:hover,
+.help .wrapper .col70 .content-chat .desc .keyword:hover,
+.help .wrapper .col70 .content-chat .desc .content:hover,
+.help .wrapper .col70 .content-vehicle .desc .keyword:hover,
+.help .wrapper .col70 .content-vehicle .desc .content:hover,
+.help .wrapper .col70 .content-faction .desc .keyword:hover,
+.help .wrapper .col70 .content-faction .desc .content:hover,
+.help .wrapper .col70 .content-house .desc .keyword:hover,
+.help .wrapper .col70 .content-house .desc .content:hover,
+.help .wrapper .col70 .content-weapon .desc .keyword:hover,
+.help .wrapper .col70 .content-weapon .desc .content:hover {
   background-color: var(--grayopa10);
 }
-.help .wrapper .col70 .content-general .desc .keyword {
+.help .wrapper .col70 .content-general .desc .keyword,
+.help .wrapper .col70 .content-chat .desc .keyword,
+.help .wrapper .col70 .content-vehicle .desc .keyword,
+.help .wrapper .col70 .content-faction .desc .keyword,
+.help .wrapper .col70 .content-house .desc .keyword,
+.help .wrapper .col70 .content-weapon .desc .keyword {
   flex: 2;
   text-align: center;
   display: flex;
@@ -553,8 +589,14 @@ header .heading ul .active {
   align-items: center;
   background-color: var(--grayopa10);
   opacity: 0.9;
+  border: 1px solid var(--black);
 }
-.help .wrapper .col70 .content-general .desc .content {
+.help .wrapper .col70 .content-general .desc .content,
+.help .wrapper .col70 .content-chat .desc .content,
+.help .wrapper .col70 .content-vehicle .desc .content,
+.help .wrapper .col70 .content-faction .desc .content,
+.help .wrapper .col70 .content-house .desc .content,
+.help .wrapper .col70 .content-weapon .desc .content {
   flex: 8;
   padding-left: 16px;
 }
