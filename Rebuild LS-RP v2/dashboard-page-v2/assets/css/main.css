@@ -679,4 +679,11 @@ header .heading ul .active {
   transform: translateY(2px);
 }
 
+.error404 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../../lib/images/404.jpg);
+  background-position: center;
+}
+
 /*# sourceMappingURL=main.css.map */

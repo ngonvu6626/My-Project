@@ -653,3 +653,11 @@ header {
     }
   }
 }
+
+// Error 404
+.error404 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../../lib/images/404.jpg);
+  background-position: center;
+}
